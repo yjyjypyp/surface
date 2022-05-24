@@ -6,8 +6,8 @@ body {
 }
 div.rect {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-color: black;
   filter: opacity(1) drop-shadow(0 0 0px rgba(0,0,0,0.5));
   animation: up 3s ease-in-out forwards;
