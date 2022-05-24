@@ -3,6 +3,7 @@
 body {
   background: #ffffff;
   overflow: hidden;
+  overscroll-behavior: none;
 }
 div.rect {
   position: absolute;
