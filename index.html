@@ -22,10 +22,10 @@
         div.style.top = e.clientY + 'px';
         div.style.left = e.clientX + 'px';
       }
-      document.onmousedown = e => {createDiv(e)}
+      document.onTouchStart = e => {createDiv(e)}
                                   
       function addEventListeners(){
-        CANVAS.addEventListener("mousedown", onmousedown);
+        CANVAS.addEventListener("touchstart", onTouchStart);
       }
       
       </script>
