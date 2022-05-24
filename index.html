@@ -9,6 +9,12 @@
   <body>
     <script type="text/javascript">
       let hue = 0;
+      
+      function main() {
+        addEventListners();
+      }                            
+                                  
+                                  
       function createDiv(e) {
         let div = document.createElement('div');
         document.body.appendChild(div);
@@ -17,8 +23,10 @@
         div.style.left = e.clientX + 'px';
       }
       document.onmousemove = e => {createDiv(e)}
-      document.addEventListener("touchstart", e)
-                                            
+                                  
+      function addEventListeners(){
+        CANVAS.addEventListener("mousemove", onmousemove);
+      }
       
       </script>
 
