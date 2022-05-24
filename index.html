@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=width=device-width, initial-scale=1.0">
+    <title> TEST </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      let hue = 0;
+      function createDiv(e) {
+        let div = document.createElement('div');
+        document.body.appendChild(div);
+        div.setAttribute('class','rect');
+        div.style.top = e.clientY + 'px';
+        div.style.left = e.clientX + 'px';
+      }
+      document.onmousemove = e => {createDiv(e)}
+      </script>
+
+  </body>
+</html>
