@@ -22,10 +22,10 @@
         div.style.top = e.clientY + 'px';
         div.style.left = e.clientX + 'px';
       }
-      document.onmousemove = e => {createDiv(e)}
+      document.onmousedown = e => {createDiv(e)}
                                   
       function addEventListeners(){
-        CANVAS.addEventListener("mousemove", onmousemove);
+        CANVAS.addEventListener("mousedown", onmousedown);
       }
       
       </script>
