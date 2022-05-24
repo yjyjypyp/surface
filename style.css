@@ -1,0 +1,44 @@
+*{margin: 0; padding: 0;}
+*::before, *::after {box-sizing: border-box;}
+body {
+  background: #ffffff;
+  overflow: hidden;
+}
+div.rect {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  filter: opacity(1) drop-shadow(0 0 0px rgba(0,0,0,0.5));
+  animation: up 3s ease-in-out forwards;
+}
+div.rect::before,
+div.rect::after {
+  position: absolute;
+  content: '';
+  background: inherit;
+}
+div.rect::before {
+  /*
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  /*border-radius: 40px 0 0 0px;*/
+}
+div.rect::after {
+  /*
+  top: 0%;
+  right: 50;
+  width: 50%;
+  height: 100%;
+  /*border-radius: 40px 0px 0 0px;*/
+}
+@keyframes up {
+  from {
+
+  }
+  to {
+
+  }
+}
