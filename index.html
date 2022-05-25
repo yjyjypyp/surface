@@ -14,6 +14,15 @@
       function main() {
         addEventListners();
       }
+      
+      function addEventListeners(){
+          CANVAS.addEventListener("mousedown", onMouseDown);
+          CANVAS.addEventListener("mousemove", onMouseMove);
+          CANVAS.addEventListener("mouseup", onMouseUp);
+          CANVAS.addEventListener("touchstart", onTouchStart);
+          CANVAS.addEventListener("touchmove", onTouchMove);
+          CANVAS.addEventListener("touchend", onTouchEnd);
+      }
 
       function createDiv(e) {
         let div = document.createElement('div');
@@ -22,7 +31,9 @@
         div.style.top = e.clientY + 'px';
         div.style.left = e.clientX + 'px';
       }
+      /*
       document.onmousemove = e => {createDiv(e)}
+      */
       document.onTouchStart = e => {createDiv(e)}
       document.onTouchMove = e => {createDive(e)}
       /*document.querySelector('p').addEventListener('touchstart', f);
@@ -32,14 +43,17 @@
         console.log( ev.touches, ev.type );
       }*/
 
-      function addEventListeners(){
-          CANVAS.addEventListener("mousedown", onMouseDown);
-          CANVAS.addEventListener("mousemove", onMouseMove);
-          CANVAS.addEventListener("mouseup", onMouseUp);
-          CANVAS.addEventListener("touchstart", onTouchStart);
-          CANVAS.addEventListener("touchmove", onTouchMove);
-          CANVAS.addEventListener("touchend", onTouchEnd);
-      }
+    
+      
+      function onTouchStart(evt) {
+      let loc={x:evt.touches[0].clientX},
+          y:evt.touches[0].clientY};
+      onMouseDown(loc);
+      
+      function onTouchMove(evt) {
+      let loc={x:evt.touches[0].clientX},
+          y:evt.touches[0].clientY};
+      onMouseMove(loc);
       
       </script>
 
