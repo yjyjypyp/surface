@@ -2,19 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" "content=width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> TEST </title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <div class="background-image"></div>
     <script type="text/javascript">
       let hue = 0;
-      
+
       function main() {
         addEventListners();
-      }                            
-                                  
-                                  
+      }
+
       function createDiv(e) {
         let div = document.createElement('div');
         document.body.appendChild(div);
@@ -22,19 +22,24 @@
         div.style.top = e.clientY + 'px';
         div.style.left = e.clientX + 'px';
       }
-      document.onMouseMove = e => {createDiv(e)}
+      document.onmousemove = e => {createDiv(e)}
+      document.onTouchStart = e => {createDiv(e)}
+      document.onTouchMove = e => {createDive(e)}
+      /*document.querySelector('p').addEventListener('touchstart', f);
+      document.querySelector('p').addEventListener('touchend', f);
 
-                                  /*
-      function addEventListeners(){
-        CANVAS.addEventListener("mousedown", onMouseDown);                          
-        CANVAS.addEventListener("mousemove", onMouseMove);                          
-        CANVAS.addEventListener("mouseup", onMouseUp);                          
-        CANVAS.addEventListener("touchstart", onTouchStart);                          
-        CANVAS.addEventListener("touchmove", onTouchMove);                          
-        CANVAS.addEventListener("touchend", onTouchEnd);
+      function f(ev){
+        console.log( ev.touches, ev.type );
       }*/
-                                                                     
-      
+
+      function addEventListeners(){
+          CANVAS.addEventListener("mousedown", onMouseDown);
+          CANVAS.addEventListener("mousemove", onMouseMove);
+          CANVAS.addEventListener("mouseup", onMouseUp);
+          CANVAS.addEventListener("touchstart", onTouchStart);
+          CANVAS.addEventListener("touchmove", onTouchMove);
+          CANVAS.addEventListener("touchend", onTouchEnd);
+      }
       </script>
 
   </body>
