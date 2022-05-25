@@ -34,9 +34,8 @@
       /*
       document.onmousemove = e => {createDiv(e)}
       */
-      document.onTouchStart = e => {createDiv(e)}
-      /*document.querySelector('p').addEventListener('touchstart', f);
-      document.querySelector('p').addEventListener('touchend', f);
+      document.onTouchMove = e => {createDiv(e)}
+     
 
       function f(ev){
         console.log( ev.touches, ev.type );
