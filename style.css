@@ -7,7 +7,7 @@ body {
   overscroll-behavior: none;
 }
 .background-image{
-  background-image: url('bg_03.png');
+  background-image: url('bg_02.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 1080px;
