@@ -10,7 +10,7 @@ body {
   background-image: url('bg_03.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 1300px;
+  height: 1080px;
 }
 div.rect {
   position: absolute;
