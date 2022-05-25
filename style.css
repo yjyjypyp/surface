@@ -1,9 +1,16 @@
 *{margin: 0; padding: 0;}
 *::before, *::after {box-sizing: border-box;}
+
 body {
   background: #ffffff;
   overflow: hidden;
   overscroll-behavior: none;
+}
+.background-image{
+  background-image: url('img/IMG_7219.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1300px;
 }
 div.rect {
   position: absolute;
@@ -42,4 +49,5 @@ div.rect::after {
   to {
 
   }
+
 }
